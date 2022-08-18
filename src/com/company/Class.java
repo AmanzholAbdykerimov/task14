@@ -1,18 +1,21 @@
 package com.company;
+
+import java.util.Arrays;
+
 public class Class {
     private int nomer;
-    private String name;
-    private int[]arr;
-    public Class(int nomer,String name,int ... arr){
-        this.name=name;
-        this.arr=arr;
+    private String soz;
+    private int[]massiv;
+    public Class(int nomer,String soz,int ... massiv){
+        this.soz=soz;
+        this.massiv=massiv;
         this.nomer=nomer;
     }
-    void Class1(){
-        System.out.println(nomer);
-        System.out.println(name);
-        for (int i=0;i< arr.length;i++) {
-            System.out.println(arr[i]);
-        }
+
+    @Override
+    public String toString() {
+        return "nomer=" + nomer +
+                ", soz='" + soz + '\'' +
+                ", massiv=" + Arrays.toString(massiv) ;
     }
 }
